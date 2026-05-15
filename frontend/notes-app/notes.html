@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Brainiac-sama" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>My <span>Notes.</span></h1>
+      <p>// connected to your Express API</p>
+      <button class="btn-logout" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- CREATE NOTE FORM -->
+    <div class="card">
+      <h2>New Note</h2>
+      <input
+        id="note-title"
+        type="text"
+        placeholder="Title..."
+        onfocus="this.style.borderColor = 'var(--accent)'"
+        onblur="this.style.borderColor = 'var(--border)'"
+      />
+      <textarea
+        id="note-input"
+        placeholder="Write your note here..."
+      ></textarea>
+      <button class="btn-primary" onclick="createNote()">Save Note</button>
+      <div id="status"></div>
+    </div>
+
+    <!-- NOTES LIST -->
+    <div class="section-label">All Notes</div>
+    <div id="notes-list">
+      <div class="empty-state">Loading notes...</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

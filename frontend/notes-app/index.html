@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes — Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>My <span>Notes.</span></h1>
+      <p>// sign in to access your notes</p>
+    </header>
+
+    <div class="card">
+      <!-- Tab switcher -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchTab('login')">
+          Login
+        </button>
+        <button class="auth-tab" onclick="switchTab('register')">
+          Register
+        </button>
+      </div>
+
+      <!-- Login form -->
+      <div id="login-form">
+        <input id="login-username" type="text" placeholder="Username..." />
+        <input id="login-password" type="password" placeholder="Password..." />
+        <button class="btn-primary" onclick="login()">Sign In</button>
+        <div id="login-status"></div>
+      </div>
+
+      <!-- Register form -->
+      <div id="register-form" style="display: none">
+        <input
+          id="reg-username"
+          type="text"
+          placeholder="Username (min 3 characters)..."
+        />
+        <input
+          id="reg-password"
+          type="password"
+          placeholder="Password (min 6 characters)..."
+        />
+        <button class="btn-primary" onclick="register()">Create Account</button>
+        <div id="register-status"></div>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

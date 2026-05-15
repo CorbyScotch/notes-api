@@ -8,7 +8,7 @@ const notesRoutes = require("./routes/notes");
 
 const app = express();
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/frontend"));
 app.use(cors());
 
 // logger middleware
