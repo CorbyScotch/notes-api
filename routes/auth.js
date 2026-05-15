@@ -81,7 +81,7 @@ router.post("/login", async (request, response) => {
   } catch (error) {
     response
       .status(500)
-      .json({ message: "Something went wrong", error: error });
+      .json({ message: "Something went wrong", error: error.message });
   }
 });
 
